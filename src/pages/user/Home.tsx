@@ -3,7 +3,7 @@ import { TbReportMedical } from "react-icons/tb";
 
 const Home = () => {
   return (
-    <div className="p-3 flex flex-col gap-10 pt-20 ">
+    <div className="p-3 flex flex-col gap-10 w-full">
       <h1 className="text-5xl font-medium">
         Employee Behavior Reporting and Monitoring System
       </h1>

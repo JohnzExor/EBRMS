@@ -1,6 +1,6 @@
 const Status = () => {
   return (
-    <div className="p-3 flex flex-col gap-2">
+    <div className="p-3 flex flex-col gap-2 w-full">
       <h1 className="text-2xl font-semibold pb-2">Report Status</h1>
       <div className="flex flex-col border rounded-xl p-2">
         <span className="flex items-center justify-between font-medium">

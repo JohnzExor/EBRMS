@@ -5,7 +5,10 @@ import { ModeToggle } from "./theme/mode-toggle";
 const Sidebar = () => {
   return (
     <div className=" h-full flex flex-col gap-2">
-      <ModeToggle />
+      <div className="flex items-center gap-2">
+        <ModeToggle />
+        <span>Theme</span>
+      </div>
 
       <Link to="/" className=" border p-2 rounded-xl">
         Home

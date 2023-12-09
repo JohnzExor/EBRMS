@@ -6,17 +6,17 @@ import { PiHouseSimple } from "react-icons/pi";
 
 const Header = () => {
   return (
-    <div className="flex items-center justify-between px-2 border-b">
+    <div className="flex items-center justify-between md:justify-center px-2 border-b">
       <Sheet>
-        <SheetTrigger className="p-2">
+        <SheetTrigger className="p-2 md:hidden">
           <HiOutlineBars3BottomRight size={30} />
         </SheetTrigger>
         <SheetContent side="left">
           <Sidebar />
         </SheetContent>
       </Sheet>
-      <label className="font-medium">EBRMS</label>
-      <Link to="/" className="p-2">
+      <label className="font-medium p-2">EBRMS</label>
+      <Link to="/" className="p-2 md:hidden">
         <PiHouseSimple size={25} />
       </Link>
     </div>

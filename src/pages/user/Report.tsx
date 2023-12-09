@@ -11,7 +11,7 @@ import ReviewReport from "./ReviewReport";
 
 const Report = () => {
   return (
-    <div className="p-3">
+    <div className="p-3 w-full">
       <h1 className="font-semibold text-2xl pb-3">Report</h1>
       <form className="flex flex-col gap-2 text-sm">
         <input

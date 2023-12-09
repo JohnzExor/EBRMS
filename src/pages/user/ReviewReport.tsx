@@ -1,6 +1,6 @@
 const ReviewReport = () => {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col w-full">
       <h1 className="font-medium text-2xl">Review</h1>
       <span className="font-semibold">
         Name: <span className="font-normal">F***</span>
