@@ -21,7 +21,6 @@ import {
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { IoIosArrowDown } from "react-icons/io";
 import { Link } from "react-router-dom";
-import { HiDocument } from "react-icons/hi2";
 
 const AdminProfile = () => {
   return (
