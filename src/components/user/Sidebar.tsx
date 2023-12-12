@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Profile from "./Profile";
-import { ModeToggle } from "./theme/mode-toggle";
+import { ModeToggle } from "../theme/mode-toggle";
 
 const Sidebar = () => {
   return (
