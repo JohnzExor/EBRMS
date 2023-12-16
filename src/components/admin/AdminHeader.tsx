@@ -4,6 +4,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { PiHouseSimple } from "react-icons/pi";
 import AdminSidebar from "./AdminSidebar";
 import AdminProfile from "./AdminProfile";
+import { ModeToggle } from "../theme/mode-toggle";
 
 const AdminHeader = () => {
   return (
@@ -17,13 +18,16 @@ const AdminHeader = () => {
         </SheetContent>
       </Sheet>
       <div className="flex md:items-center md:justify-between md:w-full md:max-w-6xl">
-        <Link to="/admin/">
-          <label className="font-medium p-2 cursor-pointer">
-            EBRMS <span className="font-normal">Admin</span>
-          </label>
-        </Link>
+        <div className="flex items-center gap-1">
+          <Link to="/admin/">
+            <label className="font-medium p-2 cursor-pointer">
+              EBRMS <span className="font-normal">Admin</span>
+            </label>
+          </Link>
+          <ModeToggle />
+        </div>
 
-        <div className="hidden md:block">
+        <div className="hidden md:block py-1">
           <AdminProfile />
         </div>
       </div>

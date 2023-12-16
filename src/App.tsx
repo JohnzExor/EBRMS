@@ -4,12 +4,12 @@ import Home from "./pages/user/Home";
 import Report from "./pages/user/Report";
 import Status from "./pages/user/Status";
 import { ThemeProvider } from "./components/theme/theme-provider";
-import ReviewReport from "./pages/user/ReviewReport";
 import AdminIndex from "./pages/admin/AdminIndex";
 import Settings from "./pages/user/Settings";
 import AdminHome from "./pages/admin/AdminHome";
 import AdminReports from "./pages/admin/AdminReports";
 import AdminManageUsers from "./pages/admin/AdminManageUsers";
+import { Toaster } from "./components/ui/toaster";
 
 const App = () => {
   return (
@@ -18,7 +18,6 @@ const App = () => {
         <Route path="/" element={<Index />}>
           <Route path="/" element={<Home />} />
           <Route path="/report" element={<Report />} />
-          <Route path="/reviewreport" element={<ReviewReport />} />
           <Route path="/status" element={<Status />} />
           <Route path="/settings" element={<Settings />} />
         </Route>
@@ -28,6 +27,7 @@ const App = () => {
           <Route path="/admin/manageusers" element={<AdminManageUsers />} />
         </Route>
       </Routes>
+      <Toaster />
     </ThemeProvider>
   );
 };

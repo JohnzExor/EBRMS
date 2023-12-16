@@ -7,8 +7,8 @@ const Index = () => {
   return (
     <div className="flex flex-col min-h-screen w-full">
       <Header />
-      <div className="md:flex flex-col md:flex-row md:gap-14 w-full md:pt-10 justify-center md:px-3">
-        <div className="h-full hidden md:block">
+      <div className="md:flex flex-col md:flex-row items-start md:gap-14 w-full md:pt-10 justify-center md:px-3">
+        <div className="hidden md:block">
           <Sidebar />
         </div>
         <div className=" max-w-3xl w-full md:border md:rounded-xl">
