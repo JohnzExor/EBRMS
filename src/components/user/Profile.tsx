@@ -25,7 +25,7 @@ const Profile = () => {
             <Avatar>
               <AvatarFallback>J</AvatarFallback>
             </Avatar>
-            jimenojohnzyll@gmail.com
+            admin@ibms.com
           </div>
         </div>
       </DropdownMenuTrigger>

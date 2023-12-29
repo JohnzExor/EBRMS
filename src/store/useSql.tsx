@@ -4,6 +4,7 @@ import { create } from "zustand";
 
 const apiURL = "https://ebrms-backend.vercel.app";
 
+// const apiURL = "http://localhost:5555";
 export const useSqlServices = create<useSqlTypes>((set) => ({
   personalReports: [],
   reports: [],
@@ -69,7 +70,24 @@ export const useSqlServices = create<useSqlTypes>((set) => ({
         toast({ description: "Report canceled/deleted" });
         getPersonalReports();
       });
-      console.log("fdsafd");
+    } catch (e: any) {
+      toast({ description: e.message });
+    }
+  },
+  updateReportStatus: async (documentID, status) => {
+    try {
+      const { getReports } = useSqlServices.getState();
+      const response = await fetch(`${apiURL}/reports/${documentID}`, {
+        method: "PATCH",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({
+          status: status,
+        }),
+      });
+      await response.json().then(() => {
+        toast({ description: "Report status updated" });
+        getReports();
+      });
     } catch (e: any) {
       toast({ description: e.message });
     }

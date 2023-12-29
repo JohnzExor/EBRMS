@@ -6,6 +6,7 @@ export const textStatus = [
   "Accepted",
   "Complete",
   "Denied",
+  "Flagged"
 ];
 export type useSqlTypes = {
   personalReports: ReportDetails[];
@@ -16,6 +17,7 @@ export type useSqlTypes = {
   getUsers: () => Promise<void>;
   postReport: (values: z.infer<typeof reportSchema>) => Promise<void>;
   deleteReport: (documentID: string) => Promise<void>;
+  updateReportStatus: (documentID: string, status: number) => void;
 };
 
 export type ReportDetails = {

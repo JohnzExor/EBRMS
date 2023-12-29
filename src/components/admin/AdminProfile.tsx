@@ -31,7 +31,7 @@ const AdminProfile = () => {
             <Avatar>
               <AvatarFallback>J</AvatarFallback>
             </Avatar>
-            jimenojohnzyll@gmail.com
+            admin@ibms.com
             <IoIosArrowDown />
           </div>
         </div>

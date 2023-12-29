@@ -15,9 +15,10 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { ReportDetails } from "@/lib/types";
+import { ReportDetails, textStatus } from "@/lib/types";
 import { Dialog, DialogTrigger } from "@radix-ui/react-dialog";
 import { DialogContent } from "../ui/dialog";
+import SetReportStatus from "../admin/SetReportStatus";
 
 export const columns: ColumnDef<ReportDetails>[] = [
   {
@@ -76,6 +77,9 @@ export const columns: ColumnDef<ReportDetails>[] = [
   {
     accessorKey: "status",
     header: "Status",
+    cell: ({ row }) => {
+      return textStatus[Number(row.original.status)];
+    },
   },
   {
     accessorKey: "File status",
@@ -138,13 +142,12 @@ export const columns: ColumnDef<ReportDetails>[] = [
             </DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuItem>Download Report</DropdownMenuItem>
-            {report.documentID
-              ? // <SetReportStatus
-                //   documentID={report.documentID}
-                //   status={report.statusNo as string}
-                // />
-                null
-              : null}
+            {report.documentID ? (
+              <SetReportStatus
+                documentID={report.documentID}
+                status={report.status as string}
+              />
+            ) : null}
 
             <DropdownMenuItem>Flag Report</DropdownMenuItem>
           </DropdownMenuContent>
